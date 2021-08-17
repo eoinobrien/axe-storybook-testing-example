@@ -1,21 +1,22 @@
 import React, { FC } from "react";
 
 const styles: any = {
-  tag: {
+  tag: (bgColor: string) => ({
     display: "inline",
     padding: "0.5rem 1rem",
-    backgroundColor: "red",
+    backgroundColor: bgColor,
     color: "darkred"
-  },
+  }),
 };
 
 interface TagProps {
   title?: string;
+  backgroundColor?: string;
 }
 
-const Tag: FC<TagProps> = ({ title = "My title" }) => {
+const Tag: FC<TagProps> = ({ title = "My title", backgroundColor="red" }) => {
   return (
-    <div style={styles.tag}>{title}</div>
+    <div style={styles.tag(backgroundColor)}>{title}</div>
   );
 };
 

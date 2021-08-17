@@ -1,5 +1,5 @@
 {
-  "name": "axe-storybook-sample",
+  "name": "axe-storybook-testing-example",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -21,8 +21,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook",
-    "storybook:axe": "build-storybook && axe-storybook"
+    "storybook": "start-storybook -p 6014",
+    "storybook:axe": "build-storybook && axe-storybook --failing-impact moderate"
   },
   "eslintConfig": {
     "extends": [

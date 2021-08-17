@@ -3,12 +3,18 @@ import Tag from './index'
 
 export default {
      title: 'Tag title',
-     component: Tag
+     component: Tag,
+     argTypes: {
+          backgroundColor: {
+               control: 'color'
+          }
+     },
+     args: {
+          title: "My Title",
+          backgroundColor: "red"
+     }
 }
 
-export const Basic = () => (
-     <Tag />
-)
-export const Second = () => (
-     <Tag title="My second tag" />
+export const Basic = (args: any) => (
+     <Tag {...args}/>
 )
