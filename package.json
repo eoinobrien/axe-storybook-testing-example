@@ -22,7 +22,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6014",
-    "storybook:axe": "build-storybook && axe-storybook --failing-impact moderate"
+    "storybook:axe": "build-storybook && axe-storybook --failing-impact moderate",
+    "storybook:axe:server": "axe-storybook --storybook-address http://localhost:6014"
   },
   "eslintConfig": {
     "extends": [
